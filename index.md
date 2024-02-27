@@ -7,9 +7,14 @@
 #
 layout: home
 ---
+![image tooltip here](/assets/me.jpg){: width="300" style="float: right; margin-left: 1em;"}
 
-My name is Varun Giridhar. I'm currently studying Computer Science at Georgia Tech. My interest in CS focuses on robotics - especially perception and task planning (though, I am always looking to widen my knowledge in robotics).
+My name is Varun Giridhar. I'm currently studying Computer Science at Georgia Tech. My interest in Computer Science focuses on robotics. Over the past few years, I've worked on some pretty cool stuff:
+* Simultaneous Localization and Mapping (SLAM) for agricultural robots :corn:
+* Task planning for Unmanned Aerial Vehicles :airplane:
 
-Outside of work and academics, I like to dance (hip-hop), and I have recently been exploring more breakdance + floorwork. I also play soccer wherever I find the opportunity.
+More recently, I've taken up a position at the [People, AI, & Robots (PAIR)](https://www.pair.toronto.edu/) research group under Professor Animesh Garg where I'm focusing on Reinforcement Learning for dexterous robot control :mechanical_arm:.
 
-This website is meant to showcase some of my work and activities _and_ journal my explorations into my interests.
+Outside of work and academics, I like to (break)dance: movement with music has infinite degrees of freedom! I also play :soccer: wherever I find the opportunity.
+
+I'm still figuring out whether this website should be more academic-y, or a more holistic of my life, or both...
