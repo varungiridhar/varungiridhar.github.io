@@ -3,7 +3,7 @@ layout: page
 title: Work
 permalink: /work/
 ---
-
+A work in progress...
 <ul>
   {% for post in site.categories.work %}
     <li>
