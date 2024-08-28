@@ -15,7 +15,7 @@ Hi! I'm Varun Giridhar. I'm interested in all things **robotics**. Over the year
 - Multi-agent drone systems :airplane:
 - Self-driving cars :car:
 
-I'm currently a researcher in [PAIR Lab](https://www.pair.toronto.edu/) working with [Prof. Animesh Garg](https://animesh.garg.tech/). My current focus is on training robots to achieve a wide variety of tasks which often require learned dexterous manipulations :mechanical_arm:.
+I'm currently a researcher in [PAIR Lab](https://www.pair.toronto.edu/) working under [Prof. Animesh Garg](https://animesh.garg.tech/). My current focus is in findings ways to make robots solve complex tasks, which often require learned dexterous manipulations :mechanical_arm:.
 
 Outside of work and academics, I like to play :soccer: and read books (check out my reading list [here](/reading-list/)). 
 <!-- add a section on blogs once you have a blog up -->
