@@ -7,15 +7,15 @@
 #
 layout: home
 ---
-![image tooltip here](/assets/me.jpg){: width="300" style="float: right; margin-left: 1em;"}
+![image tooltip here](/assets/me.png){: width="300" style="float: right; margin-left: 1em"}
 
-Hi! I'm Varun Giridhar. I'm am currently doing a Bachelor's in Computer Science at Georgia Tech. In particular, my interest in CS focuses on robotics. Over the past few years, I've worked on some pretty cool stuff:
-* Simultaneous Localization and Mapping (SLAM) for agricultural robots :corn:
-* Task planning for Unmanned Aerial Vehicles :airplane:
-* Software implementation of self-driving car for rideshare service :taxi:
 
-More recently, I've taken up a position at the [People, AI, & Robots (PAIR)](https://www.pair.toronto.edu/) research group under Professor Animesh Garg where I'm focusing on Reinforcement Learning for dexterous robot control :mechanical_arm:.
+Hi! I'm Varun Giridhar. I'm interested in all things **robotics**. Over the years, I've had a wide breadth of experiences: 
+- Vision on agricultural robots :corn:
+- Multi-agent drone systems :airplane:
+- Self-driving cars :car:
 
-Outside of work and academics, I like to (break)dance: movement with music has infinite degrees of freedom! I also play :soccer: wherever I find the opportunity.
+I'm currently a researcher in [PAIR Lab](https://www.pair.toronto.edu/) working with [Prof. Animesh Garg](https://animesh.garg.tech/). My current focus is on training robots to achieve a wide variety of tasks which often require learned dexterous manipulations :mechanical_arm:.
 
-I'm still figuring out whether this website should be more academic-y, or a more holistic of my life, or both... Thank you for visiting!
+Outside of work and academics, I like to play :soccer: and read books (check out my reading list [here](/reading-list/)). 
+<!-- add a section on blogs once you have a blog up -->
