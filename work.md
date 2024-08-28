@@ -13,7 +13,7 @@ permalink: /work/
   {% endfor %}
 </ul> -->
 
-<!-- <div class="paper-showcase">
+<div class="paper-showcase">
   <div class="paper-image">
     <img src="{{ site.baseurl }}/assets/pwm.gif" alt="Paper Thumbnail">
   </div>
@@ -27,14 +27,4 @@ permalink: /work/
     </div>
   </div>
 </div>
-<hr class="subtle-line"> -->
-
-<div class="publication row clearfix">
-  <div class="row-media" style="url(assets/pwm.gif);"></div>
-  <div class="row-text">
-      <a class="publication-title bold" href="https://arxiv.org/abs/2407.16680">PWM: Policy Learning with Large World Models </a><br/>
-      Ignat Georgiev, <span class="bold">Varun Giridhar</span>, Nicklas Hansen, Animesh Garg<br/>
-      <span class="italic">arXiv preprint</span>, 2024<br/>
-      <a class="btn btn-orange" href="https://www.imgeorgiev.com/pwm/">project page</a> / <a class="btn btn-red" href="https://arxiv.org/abs/2407.02466">arXiv</a> / <a class="btn" href="https://github.com/imgeorgiev/PWM">code</a>
-  </div>
-</div>
+<hr class="subtle-line">
