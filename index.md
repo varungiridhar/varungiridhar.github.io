@@ -7,7 +7,11 @@
 #
 layout: home
 ---
-![image tooltip here](/assets/me.png){: width="300" style="float: right; margin-left: 1em"}
+<div class="header-profile-container">
+    <div class="header-profile-picture"></div>
+</div>
+
+<hr class="subtle-line">
 
 
 Hi! I'm Varun Giridhar. I'm interested in all things **robotics**. Over the years, I've had a wide breadth of experiences: 

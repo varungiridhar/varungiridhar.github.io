@@ -4,6 +4,7 @@ author:
   email: varungiridhar6@gmail.com
   github: https://github.com/varungiridhar
 
+
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 # description: >
@@ -77,5 +78,3 @@ minima:
   #  - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
   #  - { platform: x,              user_url: "https://x.com/jekyllrb" }
   #  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
-
-
