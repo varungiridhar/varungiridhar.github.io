@@ -36,3 +36,78 @@ p {line-height: 1.5em;}
 .footer-content a:hover {color: #f09228 !important;}
 .stars {font-size: 10px; display: inline-block; margin-left: 6px; color: #666;}
 hr.subtle-line {border: none; height: 1px; background-color: #ddd; /* Adjust color for subtlety */margin: 20px 0; /* Adjust the margin as needed */}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+.image-container img {
+max-width: 100%;
+height: auto;
+}
+
+.image-caption {
+font-style: italic;
+font-size: 0.9em;
+margin-top: 5px;
+}
+
+.custom-list {
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .list-item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .dot {
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  
+  .topic {
+    font-weight: bold;
+  }
+  
+  .papers {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: none;
+  }
+  
+  .papers::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: -10px;
+    bottom: 0;
+    width: 2px;
+    background-color: #D3D3D3; /* Light gray color */
+  }
+  
+  .papers li {
+    margin-bottom: 5px;
+  }
+
+  .papers li a.subgoal-link {
+    color: #D3D3D3; /* Light gray color */
+    text-decoration: none;
+  }
+  
+  .papers li a.subgoal-link:hover {
+    text-decoration: underline;
+  }
+  
+  .divider {
+    border-top: 1px solid #D3D3D3; /* Light gray color */
+    border-bottom: none;
+  }

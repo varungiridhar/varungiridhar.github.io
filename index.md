@@ -11,15 +11,42 @@ layout: home
     <div class="header-profile-picture"></div>
 </div>
 
-<hr class="subtle-line">
+<hr class="divider">
 
 
-Hi! I'm Varun Giridhar. I'm interested in all things **robotics**. Over the years, I've had a wide breadth of experiences: 
+Hi, I'm Varun. I'm a Master's student in Georgia Tech studying Computer Science. I'm interested in machine learning, especially applied to physical embodiments (a.k.a. robotics).
+
+**Technically**, I'm interested in merging intelligence with physical dexterity to produce more capable robots.
+
+**Philosophically**, I see robots as supplementing humanity towards our final goal, whatever that may be.
+
+<div class="image-container">
+  <img src="/assets/tars_gif.gif" alt="Description of the GIF">
+  <p class="image-caption">Intelligent + Dexterous + 90% humor  </p>
+</div>
+
+The overarching goal of "physical intelligence" opens up a plethora of unsolved paths. Though, right now, I'm invested in
+
+<div class="custom-list">
+  <div class="list-item">
+    <span class="dot"></span>
+    <span class="topic">Building models of our world for robots to interact and learn from</span>
+    <ul class="papers">
+    <li><a href="https://www.imgeorgiev.com/pwm/" class="subgoal-link">Policy learning with Multi-task World Models (ICLR '25)</a></li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+You can find my research [here](/work/) and activities, reading list, and other random stuff [here](/activities/)
+
+<!-- Over the years, I've had a wide breadth of experiences: 
 - Vision on agricultural robots :corn:
 - Multi-agent drone systems :airplane:
 - Self-driving cars :car:
 
 I'm currently a researcher in [PAIR Lab](https://www.pair.toronto.edu/) working under [Prof. Animesh Garg](https://animesh.garg.tech/). My current focus is in findings ways to make robots solve complex tasks, which often require learned dexterous manipulations :mechanical_arm:.
 
-Outside of work and academics, I like to play :soccer: and read books (check out my reading list [here](/reading-list/)). 
+Outside of work and academics, I like to play :soccer: and read books (check out my reading list [here](/reading-list/)).  -->
 <!-- add a section on blogs once you have a blog up -->

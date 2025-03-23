@@ -1,7 +1,7 @@
 title: Varun Giridhar
 author:
   name: Varun Giridhar
-  email: varungiridhar6@gmail.com
+  email: vgiridhar6@gatech.edu
   github: https://github.com/varungiridhar
 
 
@@ -36,7 +36,7 @@ plugins:
 header_pages:
   - work.md
   - activities.md
-  - reading-list.md
+  # - reading-list.md
 
 
 # Set to `true` to show excerpts on the homepage.
