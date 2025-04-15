@@ -3,7 +3,7 @@ layout: post
 title: "Books on my shelf"
 date: 2025-04-15
 author: Varun Giridhar
-featured_image: art-2.png
+featured_image: art-2.jpg
 featured_image_alt: "Books stacked in thought"
 ---
 

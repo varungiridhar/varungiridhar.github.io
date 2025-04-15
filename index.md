@@ -41,7 +41,7 @@ The overarching goal of "robot learning" opens up a plethora of unsolved problem
 
 <hr class="divider">
 
-You can find my research [here](/work/) and activities, reading list, and other random stuff [here](/activities/)
+You can find my research [here](/work/) and activities, reading list, and other random stuff [here](/other_stuff/)
 
 <!-- Over the years, I've had a wide breadth of experiences: 
 - Vision on agricultural robots :corn:
