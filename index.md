@@ -14,18 +14,20 @@ layout: home
 <hr class="divider">
 
 
-Hi, I'm Varun. I'm a Master's student in Georgia Tech studying Computer Science. I'm interested in machine learning, especially applied to physical embodiments (a.k.a. robotics).
-
-**Technically**, I'm interested in merging intelligence with physical dexterity to produce more capable robots.
+Hi, I'm Varun. I'm a Master's student at Georgia Tech studying Computer Science. I'm interested in the intersection  of **machine learning** and **robotics**. My current focus is on merging intelligence with physical dexterity via methods like reinforcement learning, imitation learning, and multi-modal models to produce more capable robots.
 
 **Philosophically**, I see robots as supplementing humanity towards our final goal, whatever that may be.
 
+
+<br><br>
 <div class="image-container">
   <img src="/assets/tars_gif.gif" alt="Description of the GIF">
-  <p class="image-caption">Intelligent + Dexterous + 90% humor  </p>
+  <p class="image-caption">Intelligent + Dexterous + 75% humor  </p>
 </div>
 
-The overarching goal of "physical intelligence" opens up a plethora of unsolved paths. Though, right now, I'm invested in
+<br><br>
+
+The overarching goal of "robot learning" opens up a plethora of unsolved problems. Though, right now, I'm invested in
 
 <div class="custom-list">
   <div class="list-item">
