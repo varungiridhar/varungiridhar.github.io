@@ -14,9 +14,9 @@ layout: home
 <hr class="divider">
 
 
-Hi, I'm Varun. I'm a Master's student at Georgia Tech studying Computer Science. I'm interested in the intersection  of **machine learning** and **robotics**. My current focus is on merging intelligence with physical dexterity via methods like reinforcement learning, imitation learning, and multi-modal models to produce more capable robots.
+Hi, I'm Varun. I'm a Master's student at Georgia Tech studying Computer Science. I'm interested in the intersection  of **machine learning** and **robotics**. My current focus is on merging intelligence with physical dexterity via methods like reinforcement learning, imitation learning, and multi-modal models to produce more capable robots. I am currently advised by Prof. Animesh Garg.
 
-**Philosophically**, I see robots as supplementing humanity towards our final goal, whatever that may be.
+<!-- **Philosophically**, I see robots as supplementing humanity towards our final goal, whatever that may be.
 
 
 <br><br>
@@ -37,7 +37,7 @@ The overarching goal of "robot learning" opens up a plethora of unsolved problem
     <li><a href="https://www.imgeorgiev.com/pwm/" class="subgoal-link">Policy learning with Multi-task World Models (ICLR '25)</a></li>
     </ul>
   </div>
-</div>
+</div> -->
 
 <hr class="divider">
 

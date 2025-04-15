@@ -3,8 +3,23 @@ layout: base
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
+  <!-- Featured Image -->
+  {% if page.featured_image %}
+    <div class="featured-image">
+      <img src="{{ '/assets/' | append: page.featured_image | relative_url }}" alt="{{ page.featured_image_alt | default: 'Featured image for this post' }}" />
+    </div>
+  {% endif %}
+
   <header class="post-header">
+    <!-- Post Title -->
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    
+    <!-- Post Subheading -->
+    {% if page.subheading %}
+      <h2 class="post-subheading">{{ page.subheading }}</h2>
+    {% endif %}
+
+    <!-- Post Metadata -->
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -26,10 +41,12 @@ layout: base
       {%- endif -%}</p>
   </header>
 
+  <!-- Post Content -->
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
 
+  <!-- Comments Section -->
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}

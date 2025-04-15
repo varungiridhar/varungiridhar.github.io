@@ -35,7 +35,7 @@ plugins:
 # in order as they should show up.
 header_pages:
   - work.md
-  - activities.md
+  - other_stuff.md
   # - reading-list.md
 
 
