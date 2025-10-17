@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Varun Giridhar</title>
+    <link rel="canonical" href="https://varungiridhar.com">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@1.50.0/iconfont/tabler-icons.min.css"> -->
+
+    <!-- puffins https://icons8.com/icon/14862/puffin-bird -->
+    <link id="favicon" rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADKElEQVR4nO2ZS2gUQRCGP1/42KyC3nygHtQooiLoRsVD8KBeFVHEi9F48yK5BeMlIgjiY0UJiCdRVISgnsSohwTxEVRQWSXiM6CYQBKzuhrNykAttMvs9PTs9GQW80Oxw/T0bH3T1dU9NTCq/0vTgTqgFcgAg0BeY9+Bt8AlYCswbiQBJgONQL8Px3X2Elg7EhCzgMchAORlZJzfIWB31BAfQ4LIA5OAY3I8DGyPKpzCGom8WEENyvxZYhuksYQzP4ATwCpgCpAAUsApIOcTxNE5OXcfGIvF7NTn4sgnYJlHvxVyjR+QqUrY7rAFUufiRE4DocLoRiZfZC9sgbS6/NlJl+sGgGvAgqLzaUOQjC2QVy5/VuNyXaGtVzJcQTU+QisBdMn5fbZABgJkpMtK/6QPkPNy7hkw3hZIkNTaZwByROmz2BZEKZA1Bv1LhVYVcEFZ3TdhWW5OOOuEX6U1W5T+KCAo4YSTUpf7TL8/PULwYRSreUGlnOjWwOgWxF4Jr8jkNalzEmYpSaFVMn/SmpHIix2NC0hQey0TfCgOoVWONQJn5bilUkGGZb2YC/wBsrIxrTiQm8q92+TctkoDyRZtKgsvVacrCeS3y7vGeml7UCkgTqlop8u9Z0v7u0oAuQFUe9QCCiEXO5APMombgKWaeyfjCtJjeO9qZQMZKxDnbdJEtUr1JFYgdw3v3ST9jpt06gh5TXCzM4YgndJvi0mnMIrOOqs38GehbFf6ZOfsW88jAJlv4M9Vj9KSp1osQzwx8CUlo+HUe+cRMEPYsv0+/Zih1LAOEUBjgHZLEN1SxNZpAnBH+jySTwuBtFLeysIG2eVzJNoUcLUaGUh7JD7Dgrjoc050yfXvwyzEHZBtdbkQt4CJmhR7RXlwnbLjDVUbgM9lQDh9NwMzZRebkL1TrazYnQqAU1E5KHPEipJSCOgxAPhlcO032X7MISI5T3SjfEbrkHgeFMtIpmkGVksppzhjZeUz3Jeitjc2q+vlqN7lqR+W1O5or0t7s9IeCy3y+FZyHVgnI1OqfRox0VPNfNCl9HZionsaR79q2m+PNMCoRsW/+gsWW3W3eLQS3QAAAABJRU5ErkJggg==">
+    <!-- <link id="favicon" rel="icon" href="data:image/png;base64,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"> -->
+
+    <!-- random emojis -->
+    <!-- <link id="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪬</text></svg>">
+    <script>
+        // credits: https://twitter.com/LeaVerou/status/1241619866475474946/
+        // https://css-tricks.com/emoji-as-a-favicon/
+        function randomEmoji(tag) {
+            // this.emojis = ["🤛", "🤞", "✌️", "🫰", "🤟", "🤘", "👉", "☝️", "🖖", "👋"];
+            this.emojis = ["🫡", "🫨", "🙃", "😂", "😮", "😅", "🤨", "🫢", "🫠", "😴", "😬", "😄", "😆", "😶"];
+            this.tag = tag;
+            i = Math.floor(Math.random() * (this.emojis.length));
+            newFavicon = faviconTemplate(this.emojis[i]);
+            this.tag.href = `data:image/svg+xml,${newFavicon}`
+        }
+        function faviconTemplate(icon) {
+            return `
+                <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+                <text y=%22.9em%22 font-size=%2290%22>
+                    ${icon}
+                </text>
+                </svg>
+            `.trim();
+        }
+        randomEmoji(document.getElementById("favicon"))
+    </script> -->
+
+    <script>
+        // console.log({'string': emscramble.string, 'indices': emscramble.indices.toString()})
+        // also used by https://www.cs.cmu.edu/~dpathak/
+
+        // scramble.js
+        //
+        // 2011, Jeff Donahue (http://jeffdonahue.com/).
+        // license: you can use this if you want to i guess
+
+        function scrambledString(tag, objName, initScrambledString, initScrambledStringIndices) {
+            this.tag = tag;
+            this.objName = objName;
+            this.string = initScrambledString;
+            this.indices = initScrambledStringIndices;
+            this.rescramble = rescramble;
+            this.initAnimatedBubbleSort = initAnimatedBubbleSort;
+            this.bubbleSortStep = bubbleSortStep;
+            this.bubbleSortBookmark = 0;
+
+            this.rescramble();
+            this.tag.innerHTML = this.string + ' <a href="#" onClick="' + this.objName + '.initAnimatedBubbleSort();return false;">unscramble</a>';
+        }
+
+        function rescramble() {
+            for (i = 0; i < this.indices.length; i++) {
+                indexToMove = Math.floor(Math.random() * (this.indices.length - i));
+                charIndexRemoved = this.indices.splice(indexToMove, 1);
+                this.indices = this.indices.concat(charIndexRemoved);
+                scrambledStringTemp = this.string.substring(0, indexToMove) +
+                    this.string.substring(indexToMove + 1) +
+                    this.string.substring(indexToMove, indexToMove + 1);
+                this.string = scrambledStringTemp;
+            }
+        }
+
+        function initAnimatedBubbleSort() {
+            this.interval = setInterval(this.objName + '.bubbleSortStep()', 2);
+        }
+
+        function bubbleSortStep() {
+            if (this.bubbleSortBookmark >= this.indices.length - 1) {
+                this.bubbleSortBookmark = 0;
+            }
+            for (i = this.bubbleSortBookmark; i < this.indices.length - 1; i++) {
+                if (i == 0) {
+                    this.changed = 0;
+                }
+                if (this.indices[i] > this.indices[i + 1]) {
+                    this.changed = 1;
+                    tempIndex = this.indices[i];
+                    this.indices[i] = this.indices[i + 1];
+                    this.indices[i + 1] = tempIndex;
+                    tempArrange = this.string.substring(0, i) +
+                        this.string.substring(i + 1, i + 2) +
+                        this.string.substring(i, i + 1) +
+                        this.string.substring(i + 2);
+                    this.string = tempArrange;
+                    this.tag.innerHTML = this.string;
+                    this.bubbleSortBookmark = i;
+                    break;
+                }
+            }
+            this.bubbleSortBookmark = i;
+            if (!this.changed) {
+                clearInterval(this.interval);
+            }
+        }
+    </script>
+
+    <!--
+        Colors chosen from https://personal.sron.nl/~pault/data/colourschemes.pdf,
+        after seeing https://twitter.com/andrewkuznet/status/1433129701476732929.
+    -->
+    <style type="text/css">
+        :root {
+            --black: rgb(29, 29, 31);  /* #1d1d1f */
+            --cyan: rgb(102, 204, 238);
+            --blue: rgb(68, 119, 170);
+            --gray: rgb(187, 187, 187);
+            --red: rgb(238, 102, 119);
+            --reda: rgba(238, 102, 119, 0.66);
+            --yellow: rgb(204, 187, 68);
+            --green: rgb(34, 136, 51);
+
+            --darkblue: rgb(0, 68, 136);
+            --darkbluea: rgba(0, 68, 136, 0.66);
+            /* --darkerblue: rgb(34, 34, 85); */
+            --milkg: rgb(253, 255, 245);
+            --milk: rgb(255, 255, 248);
+            --darkgray: #6e6e6e;
+            --shadow: 3px 3px 9px var(--gray);
+
+            /* System font stack https://css-tricks.com/snippets/css/system-font-stack/ */
+            --systemfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            --monofont: "Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", monospace;
+        }
+
+        /*
+            1rem = 10px
+            https://www.aleksandrhovhannisyan.com/blog/respecting-font-size-preferences-rems-62-5-percent/
+        */
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-size: 1.6rem;
+        }
+
+        html, body {
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        body {
+            padding: 20px;
+            line-height: 1.5;
+            color: var(--black);
+            /* background-color: rgb(250, 250, 250); */
+            background-color: var(--milk);
+            /* font-family: 'Open Sans', sans-serif; */
+            font-family: var(--systemfont);
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -webkit-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+
+        div {
+            display: block;
+        }
+
+        .container {
+            max-width: 800px;
+            min-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 20px;
+            overflow: hidden;
+        }
+
+        /*
+            Hyperlink underlining, multiline on hover
+            https://www.dannyguo.com/blog/animated-multiline-link-underlines-with-css/
+            https://css-tricks.com/styling-underlines-web/
+        */
+        a {
+            text-decoration: none;
+            color: var(--blue);
+        }
+        a:hover, a:hover > i, a:focus, a:focus > i {
+            color: var(--darkblue);
+        }
+        a {
+            /* transition: all 0.1s ease-in; */
+            background-image: linear-gradient(var(--darkbluea), var(--darkbluea));
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1.5px;
+        }
+        a:hover, a:focus {
+            background-size: 100% 1.5px;
+            /* border-bottom: 1.5px solid rgb(68, 119, 170); */
+        }
+
+        p {
+            display: inline;
+        }
+
+        footer {
+            margin-top: 20px;
+            /* padding-top: 20px; */
+            /* border-top: 0.75px solid var(--gray); */
+            text-align: center;
+            color: var(--darkgray);
+        }
+
+        .menu {
+            margin-right: 5%;
+        }
+
+        .nav {
+            float: right;
+        }
+
+        .nav > a:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .site-name > h1 {
+            font-weight: 500;
+            font-size: 2.8rem;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        h3 {
+            margin-bottom: 0;
+            font-weight: 500;
+            /* border-bottom: 0.75px solid var(--gray); */
+            /* text-transform: capitalize; */
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            margin: auto; /* center in div */
+            border-radius: .25rem;
+        }
+
+        hr {
+            border: 0;
+            width: 125%;
+            margin-left: -12.5%;
+            height: 1.5px;
+            background-image: linear-gradient(to right,
+                rgba(0, 0, 0, 0),
+                rgba(187, 187, 187, 0.2),
+                rgba(29, 29, 31, 0.15),
+                rgba(187, 187, 187, 0.2),
+                rgba(0, 0, 0, 0));
+        }
+
+        .indent {
+            padding-left: 1.8rem;
+        }
+
+        .profile-img {
+            float: right;
+            padding: 20px 20px 20px 20px;
+            width: clamp(100px, 20vw, 200px);;
+        }
+
+        .profile-img > img {
+            box-shadow: var(--shadow);
+            -moz-box-shadow: var(--shadow);
+            -webkit-box-shadow: var(--shadow);
+        }
+
+        .about-container {
+            overflow: hidden;
+        }
+
+        .accounts-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .accounts-list > li {
+            list-style-type: none;
+            align-items: center;
+        }
+
+        .accounts-list > li > svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        .bio {
+        }
+
+        .bio > p {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bio > p:not(:last-child) {
+            margin-bottom: 0.67rem;
+        }
+
+        /*
+            Not good enough right now
+            https://maxwellforbes.com/posts/web-justified-text
+            http://clagnut.com/blog/2395/
+        */
+        .justify {
+            /* text-align: justify;
+            text-justify: inter-word; */
+        }
+
+        .research-tag {
+            font-weight: 500;
+        }
+
+        .news-container {
+        }
+
+        .news-date {
+            color: var(--red);
+            font-weight: 500;
+            width: 10%;
+            min-width: 100px;
+        }
+
+        .news-date, .news-date + div {
+            display: inline-block;
+        }
+
+        .pub {
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .pub-visual {
+            float: left;
+            margin: 5px 20px 10px 5px;
+            width: 33%;
+            background-color: white !important;
+            box-shadow: var(--shadow);
+            -moz-box-shadow: var(--shadow);
+            -webkit-box-shadow: var(--shadow);
+        }
+
+        .pub-info {
+            font-size: 1.6rem;
+            display: table-cell; /* equal height as pub-visual, prevent from overflowing */
+            padding-top: 5px;
+        }
+
+        .pub-title {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            padding-bottom: 5px;
+        }
+
+        .pub-booktitle > p {
+            /* opacity: 0.6; */
+            color: var(--darkgray);
+        }
+
+        .pub-links {
+            margin-top: 10px;
+            font-family: var(--monofont);
+            font-size: 1.4rem;
+        }
+
+        .pub-highlight {
+            background-color: var(--red);
+            color: white;
+            padding: 0 3px 2px 3px;
+            font-style: normal !important;
+            border-radius: 0.05em;
+        }
+
+        /* 
+            https://kittygiraudel.com/2020/12/10/accessible-icon-links/
+            https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html
+            https://css-tricks.com/accessible-svgs/
+        */
+        .screenreader {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            margin: -1px;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        @media only screen and (min-width: 992px) {
+            .container {
+                max-width: 850px;
+            }
+
+            .pub-visual {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .pub-visual > img {
+                display: block;
+                max-width: 100%;
+                max-height: 16rem;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        @media only screen and (max-width: 640px) and (min-width: 319px){
+            html {
+                font-size: 54.6875%;
+            }
+
+            .pub-visual, .pub-info {
+                float: none;
+                padding: 10px 5px 10px 0;
+                width: 100%;
+            }
+
+            .pub-visual {
+                width: 94% !important;
+            }
+            .pub-visual > img {
+                max-height: clamp(150px, 20vw, 300px);
+                width: auto;
+            }
+
+            /* photo does not have white background, so fit to fill */
+            .photo {
+                padding: 0 !important;
+            }
+            .photo > img {
+                object-fit: cover;
+                width: 100%;
+            }
+
+            .menu, .about-container footer {
+                max-width: 95%;
+            }
+
+            .about-container {
+                overflow: unset;
+            }
+
+            .accounts-list {
+                width: 60%;
+                min-height: 100px;
+            }
+
+            .news-date, .news-date + div {
+                display: block;
+            }
+
+            .profile-img {
+                display: inline-block;
+                right: 5px;
+                max-height: 75px;
+                margin-top: -1.5rem;
+            }
+        }
+    </style>
+
+    <!-- linked data seo -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Varun Giridhar",
+            "alternateName": "varungiridhar",
+            "url": "https://varungiridhar.github.io",
+            "image": "https://varungiridhar.github.io/assets/profile.png",
+            "sameAs": [
+                "https://www.linkedin.com/in/varun-giridhar",
+                "https://github.com/varungiridhar",
+                "https://scholar.google.com/citations?user=Bgv4hAUAAAAJ&hl=en",
+                "https://openreview.net/profile?id=~Varun_Giridhar1",            ]
+        }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FD4KVVNH7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7FD4KVVNH7');
+    </script>
+</head>
+
+<body>
+<div class="container">
+    <header class="menu">
+        <div class="site-name">
+            <h1>Varun Giridhar</h1>
+        </div>
+        <hr>
+    </header>
+
+    <div>
+        <div class="profile-img">
+            <img src="assets/profile.png" alt=""/>
+        </div>
+        <div class="about-container">
+            <ul class="accounts-list">
+                <li>
+                    <!-- <svg aria-hidden="true" height="20" width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                    </svg> -->
+                    <svg aria-hidden="true" height="22" width="22" xmlns="http://www.w3.org/2000/svg" class="icon icon-color-hand-drawn" x="0px" y="0px" viewBox="10 10 80 80" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path fill="#6693c1" d="M71,82H29c-6.075,0-11-4.925-11-11V29c0-6.075,4.925-11,11-11h42c6.075,0,11,4.925,11,11v42	C82,77.075,77.075,82,71,82z"></path><path fill="#eeecd9" d="M69.933,49.039c0-3.321-1.305-6.334-3.419-8.573c0.396-2.203,0.351-5.301-0.538-7.966	c-4.475,0-8.114,3.447-8.702,4H44.47c-0.589-0.552-4.019-4-8.494-4c-0.8,2.401-1.087,5.233-0.846,7.295	c-2.518,2.286-4.108,5.575-4.108,9.245c0,6.908,5.599,12.459,12.507,12.459h2.447c-2.003,0.917-3.635,2.756-4,5	c-2,0-4.864-0.182-6.181-2.158c-2.46-3.69-3.59-3.69-4.819-3.69c-1.23,0-1.33,1.23-0.1,2.46c1.23,1.23,1.23,1.23,2.46,3.69	c1.012,2.027,3.64,3.699,8.64,3.699v6h17v-8.845c0-2.718-1.681-5.092-4-6.155h2.449C64.334,61.5,69.933,55.947,69.933,49.039z"></path><path fill="#1f212b" d="M58.976,77c-0.276,0-0.5-0.224-0.5-0.5v-8.845c0-2.431-1.456-4.668-3.708-5.701	c-0.214-0.098-0.331-0.332-0.28-0.561C54.538,61.164,54.741,61,54.976,61h2.449c6.621,0,12.008-5.366,12.008-11.961	c0-3.064-1.166-5.987-3.282-8.229c-0.109-0.115-0.157-0.275-0.129-0.432c0.333-1.854,0.39-4.725-0.409-7.37	c-3.682,0.162-6.795,2.725-7.987,3.848C57.533,36.943,57.401,37,57.274,37H44.469c-0.127,0-0.249-0.048-0.342-0.135l-0.092-0.087	c-3.078-2.927-5.829-3.686-7.697-3.77c-0.662,2.162-0.941,4.762-0.712,6.729c0.019,0.16-0.042,0.319-0.161,0.428	c-2.506,2.275-3.943,5.51-3.943,8.875c0,6.595,5.387,11.96,12.007,11.96h2.447c0.235,0,0.438,0.164,0.488,0.394	c0.051,0.229-0.066,0.463-0.28,0.561c-1.974,0.904-3.397,2.676-3.715,4.625C42.43,66.822,42.221,67,41.976,67	c-2.333,0-5.191-0.271-6.598-2.38c-2.311-3.467-3.28-3.467-4.403-3.467c-0.14,0-0.385,0.023-0.448,0.178	c-0.086,0.206,0.031,0.756,0.702,1.428c1.287,1.287,1.311,1.335,2.554,3.82C34.885,68.785,37.795,70,41.976,70	c0.276,0,0.5,0.224,0.5,0.5v6c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5v-5.505c-5.797-0.131-7.866-2.525-8.588-3.969	c-1.194-2.387-1.194-2.387-2.366-3.56c-0.869-0.869-1.213-1.81-0.919-2.518c0.209-0.505,0.709-0.795,1.372-0.795	c1.588,0,2.81,0.272,5.235,3.912c1.069,1.604,3.359,1.9,5.356,1.932c0.362-1.545,1.309-2.965,2.63-3.997h-0.668	c-7.172,0-13.007-5.813-13.007-12.959c0-3.562,1.485-6.988,4.084-9.442c-0.209-2.203,0.128-4.956,0.896-7.257	C35.57,32.138,35.761,32,35.976,32c2.036,0,5.192,0.696,8.692,4h12.409c1.427-1.311,4.847-4,8.898-4	c0.215,0,0.406,0.138,0.475,0.342c0.935,2.802,0.928,5.901,0.598,7.965c2.185,2.404,3.385,5.495,3.385,8.732	C70.433,56.186,64.598,62,57.425,62h-0.693c1.707,1.368,2.744,3.442,2.744,5.655V76.5C59.476,76.776,59.252,77,58.976,77z"></path><path fill="#1f212b" d="M65.5,77h-31C28.159,77,23,71.841,23,65.5v-31C23,28.159,28.159,23,34.5,23h31	c0.276,0,0.5,0.224,0.5,0.5S65.776,24,65.5,24h-31C28.71,24,24,28.71,24,34.5v31C24,71.29,28.71,76,34.5,76h31	C71.29,76,76,71.29,76,65.5v-15c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v15C77,71.841,71.841,77,65.5,77z"></path><path fill="#1f212b" d="M76.5,48.5c-0.276,0-0.5-0.224-0.5-0.5v-6.5c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5V48	C77,48.276,76.776,48.5,76.5,48.5z"></path><path fill="#1f212b" d="M76.5,38.5c-0.276,0-0.5-0.224-0.5-0.5v-3.5c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5V38	C77,38.276,76.776,38.5,76.5,38.5z"></path><path fill="#1f212b" d="M71,83H29c-6.617,0-12-5.383-12-12V29c0-6.617,5.383-12,12-12h42c6.617,0,12,5.383,12,12v42	C83,77.617,77.617,83,71,83z M29,19c-5.514,0-10,4.486-10,10v42c0,5.514,4.486,10,10,10h42c5.514,0,10-4.486,10-10V29	c0-5.514-4.486-10-10-10H29z"></path>
+                    </svg>
+                    <span class="screenreader">github</span>
+
+                    <a href="https://github.com/varungiridhar" rel="me">GitHub</a>
+                </li>
+                <li>
+                    <!-- <svg aria-hidden="true" height="20" width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                    </svg> -->
+                    <svg aria-hidden="true" height="22" width="22" xmlns="http://www.w3.org/2000/svg" class="icon icon-color-hand-drawn" x="0px" y="0px" viewBox="0 0 100 100" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon fill="#565fa1" points="1,39.002 49.999,16 99,38.996 49.999,62 15,45.573 14.575,46.479 7.575,43.193 8,42.288"></polygon><path fill="#a3a3cd" d="M50,34.065c-10.853,0-27,1.963-27,7.37V41.5c0,0.072,0,4.482,0,9.5c0,6.706,0,14.5,0,14.5h54	c0,0,0-8.596,0-15.5l0,0v-7.42c0-0.668,0-1.059,0-1.08v-0.065C77,36.028,60.853,34.065,50,34.065z"></path><path fill="#1f212b" d="M11.5,57c-0.276,0-0.5-0.224-0.5-0.5v-17c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v17	C12,56.776,11.776,57,11.5,57z"></path><ellipse cx="50" cy="65.75" fill="#565fa1" rx="26.5" ry="6.25"></ellipse><path fill="#1f212b" d="M77,65.5h-1c0-2.602-10.678-5.5-26-5.5s-26,2.898-26,5.5h-1c0-4.222,13.911-6.5,27-6.5	S77,61.278,77,65.5z"></path><path fill="#1f212b" d="M50,73c-13.914,0-28-2.576-28-7.5h2c0,2.243,10.129,5.5,26,5.5s26-3.257,26-5.5h2	C78,70.424,63.914,73,50,73z"></path><path fill="#fef6aa" d="M16.5,73.5c0,4.167-5,11-5,11s-5-6.833-5-11c0-2.761,2.239-5,5-5S16.5,70.739,16.5,73.5z"></path><path fill="#1f212b" d="M11.5,85c-0.159,0-0.31-0.076-0.403-0.205C10.889,84.511,6,77.781,6,73.5c0-3.033,2.468-5.5,5.5-5.5	s5.5,2.467,5.5,5.5c0,4.281-4.889,11.011-5.097,11.295C11.81,84.924,11.659,85,11.5,85z M11.5,69C9.019,69,7,71.019,7,73.5	c0,3.273,3.326,8.417,4.5,10.129C12.674,81.917,16,76.773,16,73.5C16,71.019,13.981,69,11.5,69z"></path><path fill="#f9e65c" d="M14.5,69.5h-6v-2c0-1.105,0.895-2,2-2h2c1.105,0,2,0.895,2,2V69.5z"></path><path fill="#1f212b" d="M14.5,70h-6C8.224,70,8,69.776,8,69.5v-2c0-1.378,1.121-2.5,2.5-2.5h2c1.379,0,2.5,1.122,2.5,2.5v2	C15,69.776,14.776,70,14.5,70z M9,69h5v-1.5c0-0.827-0.673-1.5-1.5-1.5h-2C9.673,66,9,66.673,9,67.5V69z"></path><path fill="#1f212b" d="M77,66.5c-0.553,0-1-0.448-1-1V49.324c0-0.388,0.224-0.74,0.575-0.905l20.071-9.423L49.999,17.104	L3.354,39.002l5.071,2.38c0.5,0.235,0.715,0.83,0.48,1.33c-0.234,0.5-0.828,0.715-1.33,0.48l-7-3.286C0.225,39.743,0,39.39,0,39.002	s0.224-0.74,0.575-0.905l48.999-23.002c0.27-0.126,0.58-0.126,0.85,0l49.001,22.996c0.351,0.165,0.575,0.518,0.575,0.905	s-0.224,0.74-0.575,0.905L78,49.959V65.5C78,66.052,77.553,66.5,77,66.5z"></path><path fill="#1f212b" d="M77,66.5L77,66.5c-0.552,0-1-0.448-1-1V49.324c0-0.388,0.224-0.74,0.575-0.905l20.071-9.423	L49.999,17.104L3.354,39.002l5.071,2.38c0.5,0.235,0.715,0.83,0.48,1.33c-0.235,0.5-0.831,0.715-1.33,0.48l-7-3.286	C0.224,39.743,0,39.39,0,39.002s0.224-0.74,0.575-0.905l48.999-23.002c0.269-0.126,0.58-0.126,0.85,0l49.001,22.996	c0.351,0.165,0.575,0.518,0.575,0.905s-0.224,0.74-0.575,0.905L78,49.959V65.5C78,66.052,77.552,66.5,77,66.5z"></path><path fill="#1f212b" d="M23,66.5c-0.552,0-1-0.448-1-1V49.963l-7.425-3.485c-0.5-0.235-0.715-0.83-0.48-1.33	c0.235-0.501,0.83-0.716,1.33-0.48l8,3.755C23.776,48.587,24,48.94,24,49.328V65.5C24,66.052,23.552,66.5,23,66.5z"></path><path fill="#1f212b" d="M11.5,61c-0.276,0-0.5-0.224-0.5-0.5v-1.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5V60.5	C12,60.776,11.776,61,11.5,61z"></path><path fill="#1f212b" d="M11.5,66c-0.276,0-0.5-0.224-0.5-0.5v-3c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v3	C12,65.776,11.776,66,11.5,66z"></path><path fill="#1f212b" d="M59.501,35.513c-0.017,0-0.032-0.001-0.049-0.002c-1.578-0.152-3.252-0.267-4.975-0.343	c-0.275-0.012-0.489-0.246-0.477-0.521c0.012-0.275,0.195-0.509,0.521-0.478c1.739,0.077,3.43,0.193,5.025,0.347	c0.275,0.026,0.477,0.271,0.45,0.545C59.973,35.32,59.755,35.513,59.501,35.513z"></path><path fill="#1f212b" d="M64.501,36.146c-0.027,0-0.054-0.002-0.081-0.006c-0.96-0.155-1.959-0.291-2.979-0.414	c-0.274-0.033-0.47-0.282-0.437-0.556c0.033-0.275,0.287-0.466,0.556-0.437c1.034,0.125,2.047,0.262,3.021,0.419	c0.272,0.044,0.458,0.301,0.413,0.573C64.954,35.972,64.741,36.146,64.501,36.146z"></path><path fill="#1f212b" d="M67.5,36.702c-0.035,0-0.07-0.003-0.106-0.012c-0.213-0.046-0.436-0.089-0.658-0.131l-0.332-0.064	c-0.271-0.054-0.447-0.316-0.394-0.587s0.319-0.448,0.587-0.394l0.327,0.063c0.23,0.044,0.462,0.088,0.683,0.137	c0.27,0.059,0.441,0.325,0.382,0.595C67.938,36.542,67.73,36.702,67.5,36.702z"></path><path fill="#1f212b" d="M76.5,51.5c-0.276,0-0.5-0.224-0.5-0.5v-9.565c0-1.591-2.354-3.106-6.631-4.265	c-0.267-0.072-0.424-0.347-0.352-0.613c0.072-0.266,0.344-0.426,0.613-0.352C74.521,37.53,77,39.29,77,41.435V51	C77,51.276,76.776,51.5,76.5,51.5z"></path><path fill="#1f212b" d="M23.5,51.5c-0.276,0-0.5-0.224-0.5-0.5v-9.565c0-5.407,16.146-7.37,27-7.37l0.503,0.006	c0.276,0.001,0.499,0.227,0.497,0.503c-0.002,0.276-0.255,0.501-0.503,0.497L50,35.065c-14.337,0-26,2.857-26,6.37V51	C24,51.276,23.776,51.5,23.5,51.5z"></path>
+                    </svg>
+                    <span class="screenreader">google scholar</span>
+
+                    <a href="https://scholar.google.com/citations?user=Bgv4hAUAAAAJ&hl=en" rel="me">Google Scholar</a>
+                </li>
+                <!-- <li>
+                    <svg aria-hidden="true" height="20" width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-text" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                        <path d="M9 9l1 0"></path>
+                        <path d="M9 13l6 0"></path>
+                        <path d="M9 17l6 0"></path>
+                    </svg>
+                    <svg aria-hidden="true" height="22" width="22" xmlns="http://www.w3.org/2000/svg" class="icon icon-color-hand-drawn" x="0px" y="0px" viewBox="0 0 100 100" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path fill="#fefdef" d="M78.921,29.555C71.047,21.68,66.548,17.182,58.674,9.307H39.859h-9.105h-2.833h-1.268c-4.803,0-8.732,3.93-8.732,8.732v61.535c0,4.803,3.93,8.732,8.732,8.732h43.535c4.803,0,8.732-3.93,8.732-8.732V29.555z"></path><path fill="#1f212b" d="M70.189,89.307H26.654c-5.366,0-9.732-4.366-9.732-9.732V18.04c0-5.367,4.366-9.732,9.732-9.732h32.021c0.266,0,0.52,0.105,0.707,0.293l20.247,20.248c0.188,0.188,0.293,0.442,0.293,0.707v50.02C79.921,84.941,75.555,89.307,70.189,89.307z M26.654,10.307c-4.264,0-7.732,3.469-7.732,7.732v61.535c0,4.264,3.469,7.732,7.732,7.732h43.535c4.264,0,7.732-3.469,7.732-7.732V29.969L58.26,10.307H26.654z"></path><path fill="#fef6aa" d="M58.421,9.807v10.986c0,4.958,4.056,9.014,9.014,9.014h11.986"></path><path fill="#1f212b" d="M79.421 30.307H67.436c-5.246 0-9.515-4.268-9.515-9.515V9.807c0-.276.224-.5.5-.5s.5.224.5.5v10.985c0 4.695 3.819 8.515 8.515 8.515h11.985c.276 0 .5.224.5.5S79.698 30.307 79.421 30.307zM73.421 48.307c-.276 0-.5-.224-.5-.5v-3c0-.276.224-.5.5-.5s.5.224.5.5v3C73.921 48.083 73.698 48.307 73.421 48.307zM73.421 56.307c-.276 0-.5-.224-.5-.5v-6c0-.276.224-.5.5-.5s.5.224.5.5v6C73.921 56.083 73.698 56.307 73.421 56.307zM66.263 83.307H30.579c-4.223 0-7.658-3.45-7.658-7.689V22.955c0-2.458 1.193-4.79 3.193-6.238 1.31-.949 2.854-1.451 4.465-1.451.276 0 .5.224.5.5s-.224.5-.5.5c-1.398 0-2.74.436-3.879 1.261-1.74 1.262-2.779 3.291-2.779 5.429v52.663c0 3.688 2.987 6.689 6.658 6.689h35.684c3.671 0 6.658-3.001 6.658-6.689V57.807c0-.276.224-.5.5-.5s.5.224.5.5v17.811C73.921 79.857 70.486 83.307 66.263 83.307z"></path><path fill="#1f212b" d="M49.421 52.307h-21c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h21c.276 0 .5.224.5.5S49.698 52.307 49.421 52.307zM41.421 59.307h-13c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h13c.276 0 .5.224.5.5S41.698 59.307 41.421 59.307zM68.421 59.307h-24c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h24c.276 0 .5.224.5.5S68.698 59.307 68.421 59.307zM59.421 66.307h-11c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h11c.276 0 .5.224.5.5S59.698 66.307 59.421 66.307zM69.421 66.307h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5S69.698 66.307 69.421 66.307zM45.421 66.307h-17c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h17c.276 0 .5.224.5.5S45.698 66.307 45.421 66.307zM68.421 73.307h-14c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h14c.276 0 .5.224.5.5S68.698 73.307 68.421 73.307zM52.421 73.307h-24c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h24c.276 0 .5.224.5.5S52.698 73.307 52.421 73.307zM49.421 45.307h-21c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h21c.276 0 .5.224.5.5S49.698 45.307 49.421 45.307z"></path><path fill="#fef6aa" d="M52.421 51.807L52.421 37.807 68.421 37.807 68.421 53.807 56.421 53.807"></path><path fill="#1f212b" d="M68.421 54.307h-12c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h11.5v-15h-15v13.5c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-14c0-.276.224-.5.5-.5h16c.276 0 .5.224.5.5v16C68.921 54.083 68.698 54.307 68.421 54.307zM49.421 38.307h-21c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h21c.276 0 .5.224.5.5S49.698 38.307 49.421 38.307z"></path>
+                    </svg>
+                    <span class="screenreader">c v</span>
+
+                    <a href="href=assets/vita.pdf">CV</a>
+                </li> -->
+                <li>
+                    <!-- <svg aria-hidden="true" height="20" width="20" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                        <path d="M3 7l9 6l9 -6"></path>
+                    </svg> -->
+                    <svg aria-hidden="true" height="22" width="22" xmlns="http://www.w3.org/2000/svg" class="icon icon-color-hand-drawn" x="0px" y="0px" viewBox="0 0 100 100" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path fill="#fefdef" d="M80,77H20c-3.314,0-6-2.686-6-6V29c0-3.314,2.686-6,6-6h60c3.314,0,6,2.686,6,6v42	C86,74.314,83.314,77,80,77z"></path><path fill="#f15b6c" d="M23,77h-3c-3.314,0-6-2.686-6-6V29h9V77z"></path><path fill="#f15b6c" d="M77,77h3c3.314,0,6-2.686,6-6V29h-9V77z"></path><path fill="#f15b6c" d="M82.09,24h-0.004L50,47.5L17.914,24H17.91c-1.883,0-3.41,1.527-3.41,3.41v1.554	c0,1.594,0.76,3.092,2.046,4.034L50,57.5l33.454-24.502c1.286-0.942,2.046-2.44,2.046-4.034V27.41C85.5,25.527,83.973,24,82.09,24z"></path><path fill="#1f212b" d="M80,78H20c-3.859,0-7-3.14-7-7V29c0-3.86,3.141-7,7-7h60c3.859,0,7,3.14,7,7v42	C87,74.86,83.859,78,80,78z M20,24c-2.757,0-5,2.243-5,5v42c0,2.757,2.243,5,5,5h60c2.757,0,5-2.243,5-5V29c0-2.757-2.243-5-5-5H20z"></path><path fill="#1f212b" d="M50,58c-0.104,0-0.207-0.032-0.296-0.097L16.25,33.401C14.842,32.37,14,30.711,14,28.964h1	c0,1.429,0.688,2.786,1.841,3.63L50,56.88l33.158-24.286C84.312,31.75,85,30.394,85,28.964h1c0,1.747-0.842,3.406-2.251,4.437	L50.296,57.903C50.207,57.968,50.104,58,50,58z"></path><path fill="#1f212b" d="M22.5,74c-0.276,0-0.5-0.224-0.5-0.5v-33c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v33	C23,73.776,22.776,74,22.5,74z"></path><path fill="#1f212b" d="M77.5,62c-0.276,0-0.5-0.224-0.5-0.5v-21c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v21	C78,61.776,77.776,62,77.5,62z"></path><path fill="#1f212b" d="M77.5,70c-0.276,0-0.5-0.224-0.5-0.5v-5c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v5	C78,69.776,77.776,70,77.5,70z"></path><path fill="#1f212b" d="M77.5,74c-0.276,0-0.5-0.224-0.5-0.5v-1c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5v1	C78,73.776,77.776,74,77.5,74z"></path><path fill="#1f212b" d="M74.5,30.056c-0.153,0-0.306-0.071-0.403-0.205c-0.163-0.223-0.115-0.536,0.108-0.699l2-1.464	c0.221-0.164,0.535-0.116,0.698,0.108c0.163,0.223,0.115,0.536-0.108,0.699l-2,1.464C74.706,30.025,74.603,30.056,74.5,30.056z"></path><path fill="#1f212b" d="M68.5,34.451c-0.153,0-0.306-0.071-0.403-0.205c-0.163-0.223-0.115-0.536,0.107-0.699l4-2.93	c0.223-0.164,0.536-0.116,0.699,0.108c0.163,0.223,0.115,0.536-0.107,0.699l-4,2.93C68.706,34.419,68.603,34.451,68.5,34.451z"></path><path fill="#1f212b" d="M50,48c-0.104,0-0.207-0.032-0.296-0.097l-32.428-23.75c-0.223-0.163-0.271-0.476-0.107-0.699	c0.163-0.224,0.477-0.271,0.699-0.108L50,46.88l16.089-11.784c0.224-0.164,0.536-0.116,0.699,0.108	c0.163,0.223,0.115,0.536-0.107,0.699l-16.385,12C50.207,47.968,50.104,48,50,48z"></path>
+                    </svg>
+                    <span class="screenreader">email</span>
+                    <span id="emaddress">
+                        <noscript><i>enable javascript to view</i></noscript>
+                    </span>
+                    <script>
+                        emscramble = new scrambledString(document.getElementById("emaddress"),
+                            "emscramble", "ude tod hcetag ta 6rahdirigv",
+                            [27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0]);
+                    </script>
+                </li>
+            </ul>
+
+            <h3>about</h3>
+            <hr>
+            <div class="bio justify">
+                <p>
+                I am a Master's student at Georgia Tech advised by <a href="https://animesh.garg.tech/">Animesh Garg</a>. I study <em>how</em> learned models behave and turn those insights into robust systems. My interest centers on <b>reinforcement learning</b>, <b>world models</b> (neural simulators), and <b>gradient-based optimization</b>.
+                </p>
+
+                <br />
+                <p>
+                    I believe the key to building intelligent systems to expose them to diverse (often challenging) environments, study their dynamics in such environments, and use that understanding to design efficient, capable algorithms. This also mirrors how I approach my research.
+                </p>
+
+                <!-- <p>
+                    I am a PhD student in the <a href="https://www.ri.cmu.edu/">Robotics Institute</a> at Carnegie Mellon University, co-advised by <a href="https://www.cs.cmu.edu/~./jeanoh/">Jean Oh</a> and <a href="https://www.gshi.me/">Guanya Shi</a>. 
+                    My research generally spans <span class="research-tag">reinforcement learning,</span> <span class="research-tag">robot learning,</span> and <span class="research-tag">physics simulations</span>. 
+                    I am particularly interested in learning for control through differentiable simulation of complex physical systems. 
+                </p>
+                <br />
+                <p>
+                    Previously, I completed my B.S. in Mathematics & B.S. in Computer Engineering from Georgia Tech, where I worked with <a href="https://charliekemp.com/">Charlie Kemp</a> and <a href="https://www.cc.gatech.edu/~chernova/">Sonia Chernova</a>. 
+                    In that time, I worked with <a href="http://www.cs.cmu.edu/~abhinavg/">Abhinav Gupta</a> at Carnegie Mellon University, and was part of <a href="https://riss.ri.cmu.edu/meet-the-2020-ri-summer-scholars/">RISS</a> (2020, remotely) as well. 
+                    Moreover, I was fortunate to collaborate with <a href="https://zackory.com/">Zackory Erickson</a>, <a href="https://twitter.com/samnpowers/">Sam Powers</a>, and <a href="https://vdean.github.io/">Victoria Dean</a>.
+                </p> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="teaching-container">
+        <h3>teaching</h3>
+        <hr>
+        <div class="indent">
+            <div class="news-date">Fall 2024</div><div>TA for <a href="https://16-831.github.io/fall24/">16-831: Intro to Robot Learning</a></div>
+            <br />
+            <div class="news-date">Fall 2023</div><div>TA for <a href="https://16-831.github.io/fall23/">16-831: Intro to Robot Learning</a></div>
+        </div>
+    </div> -->
+
+    <div class="pub-container">
+        <h3>research</h3>
+        <hr>
+        <!-- <div class="indent" style="font-size: 1.2rem;">
+            <p style="display: block;"><i>* equal contribution, &#8225; equal advising</i></p>
+        </div> -->
+        <div class="pubs">
+
+            <!-- <div class="indent">
+                <p style="display: block;"><b>2025</b></p>
+            </div> -->
+
+            <div class="pub">
+                <div class="pub-visual">
+                    <img src="assets/pub/towards_policy_aware_world_models.png" alt=""/>
+                </div>
+                <div class="pub-info">
+                    <div class="pub-title">
+                        <a href="https://policy-aware.github.io/paper-anon/">
+                            Towards Policy-Aware World Models
+                        </a>
+                    </div>
+                    <div class="pub-authors">
+                        <b>Varun Giridhar</b>, Ignat Georgiev, Hrishit Leen, Nicklas Hansen, Animesh Garg
+                    </div>
+                    <div class="pub-booktitle">
+                        <p>Under Review</p>
+                        <br />
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://policy-aware.github.io/paper-anon/">webpage</a>
+                        /
+                        <a href="https://github.com/policy-aware/world_model_metrics">code</a>
+                        /
+                        <a href="https://policy-aware.github.io/paper-anon/static/supp/2644_Towards_Policy_Aware_World_Models.pdf">pdf</a>
+                        /
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="indent">
+                <p style="display: block;"><b>2024</b></p>
+            </div> -->
+
+            <div class="pub">
+                <div class="pub-visual photo">
+                    <img src="assets/pub/pwm.gif" alt=""/>
+                </div>
+                <div class="pub-info">
+                    <div class="pub-title">
+                        <a href="https://arxiv.org/abs/2407.02466">
+                            PWM: Policy Learning with Multi-Task World Models
+                        </a>
+                    </div>
+                    <div class="pub-authors">
+                        Ignat Georgiev, <b>Varun Giridhar</b>, Nicklas Hansen, Animesh Garg
+                    </div>
+                    <div class="pub-booktitle">
+                        <p>International Conference on Learning Representations (ICLR), 2024</p>
+                        <br />
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://www.imgeorgiev.com/pwm/">webpage</a>
+                        /
+                        <a href="https://github.com/imgeorgiev/PWM">code</a>
+                        /
+                        <a href="https://arxiv.org/abs/2407.02466">openreview</a>
+                        /
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub">
+                <div class="pub-visual photo">
+                    <img src="assets/pub/dynamics_decomposition.png" alt=""/>
+                </div>
+                <div class="pub-info">
+                    <div class="pub-title">
+                        <a href="assets/pub/explorations_in_dd_for_mtrl.pdf" download>
+                            Explorations in Dynamics Decomposition for Multi-Task RL
+                        </a>
+                    </div>
+                    <div class="pub-authors">
+                        <b>Varun Giridhar</b>, Ignat Georgiev, Nicklas Hansen, Animesh Garg
+                    </div>
+                    <!-- <div class="pub-booktitle">
+                        <p>International Conference on Learning Representations (ICLR), 2024</p>
+                        <br />
+                    </div> -->
+                    <div class="pub-links">
+                        <a href="assets/pub/explorations_in_dd_for_mtrl.pdf" download>paper</a>
+                        /
+                        <!-- /
+                        <a href="https://github.com/imgeorgiev/PWM">code</a>
+                        /
+                        <a href="https://arxiv.org/abs/2407.02466">openreview</a>
+                        / -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub">
+                <div class="pub-visual photo">
+                    <img src="assets/pub/av_for_rural_roads.png" alt=""/>
+                </div>
+                <div class="pub-info">
+                    <div class="pub-title">
+                        <a href="https://cee.illinois.edu/news/autonomous-cars-addressing-rural-road-blocks">
+                            Autonomous Cars Addressing Rural Road
+                        </a>
+                    </div>
+                    <div class="pub-authors">
+                        <b>Varun Giridhar</b>
+                    </div>
+                    <!-- <div class="pub-booktitle">
+                        <br />
+                    </div> -->
+                    <div class="pub-links">
+                        <a href="https://cee.illinois.edu/news/autonomous-cars-addressing-rural-road-blocks">webpage</a>
+                        /
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- <div class="pub-container">
+    <h3>work</h3>
+    <hr> -->
+
+
+    <div class="pub-container">
+        <h3>books on my shelf</h3>
+        <hr>
+        <ul class="indent">
+            <li>Cthulhu Mythos - H.P. Lovecraft</li>
+            <li>The Martian — Andy Weir</li>
+            <li>The Great Gatsby — F Scott Fitzgerald</li>
+            <li>Self-Reliance and Nature — Ralph Waldo Emerson</li>
+            <li>Meditations — Marcus Aurelius</li>
+            <li>Genghis Khan and the Making of the Modern World — Jack Weatherford</li>
+            <li>The Hitchhiker’s Guide to the Galaxy — Douglas Adams</li>
+            <li>The Alchemist — Paulo Coelho</li>
+            <li>Crime and Punishment — Fyodor Dostoevsky</li>
+            <li>The Wager — David Grann</li>
+            <li>Pachinko — Min Jin Lee</li>
+            <li>The Age of Vikings — Anders Winroth</li>
+        </ul>
+    </div>
+
+    <hr>
+    <footer>
+        <div style="font-size: 1.4rem;">
+            <br />
+            <i>Website template borrowed from <a href="https://github.com/eliotxing/eliotxing.github.io">Eliot Xing</a>.</i>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
